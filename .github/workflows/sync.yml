@@ -11,23 +11,18 @@ jobs:
         name: Sync Secrets
         with:
           SECRETS: |
-            ^_GITHUB_.*
-            ^CURSEFORGE_.*
-            ^GRADLE_.*
-            ^PEARX_.*
-            ^PGP_.*
-            ^SONATYPE_.*
+            ^S_.*
           REPOSITORIES: ^pearxteam\/
           GITHUB_TOKEN: ${{ secrets._GITHUB_SYNC_TOKEN }}
         env:
-          CURSEFORGE_API_KEY: ${{secrets.CURSEFORGE_API_KEY}}
-          GRADLE_PUBLISH_KEY: ${{secrets.GRADLE_PUBLISH_KEY}}
-          GRADLE_PUBLISH_SECRET: ${{secrets.GRADLE_PUBLISH_SECRET}}
-          PEARX_REPO_PASSWORD: ${{secrets.PEARX_REPO_PASSWORD}}
-          PEARX_REPO_USERNAME: ${{secrets.PEARX_REPO_USERNAME}}
-          PGP_KEY_PASSWORD: ${{secrets.PGP_KEY_PASSWORD}}
-          PGP_KEY_PRIVATE: ${{secrets.PGP_KEY_PRIVATE}}
-          PGP_KEY_PUBID: ${{secrets.PGP_KEY_PUBID}}
-          SONATYPE_OSS_PASSWORD: ${{secrets.SONATYPE_OSS_PASSWORD}}
-          SONATYPE_OSS_USERNAME: ${{secrets.SONATYPE_OSS_USERNAME}}
-          _GITHUB_RELEASE_TOKEN: ${{secrets._GITHUB_RELEASE_TOKEN}}
+          S_CURSEFORGE_API_KEY: ${{secrets.CURSEFORGE_API_KEY}}
+          S_GRADLE_PUBLISH_KEY: ${{secrets.GRADLE_PUBLISH_KEY}}
+          S_GRADLE_PUBLISH_SECRET: ${{secrets.GRADLE_PUBLISH_SECRET}}
+          S_PEARX_REPO_PASSWORD: ${{secrets.PEARX_REPO_PASSWORD}}
+          S_PEARX_REPO_USERNAME: ${{secrets.PEARX_REPO_USERNAME}}
+          S_PGP_KEY_PASSWORD: ${{secrets.PGP_KEY_PASSWORD}}
+          S_PGP_KEY_PRIVATE: ${{secrets.PGP_KEY_PRIVATE}}
+          S_PGP_KEY_PUBID: ${{secrets.PGP_KEY_PUBID}}
+          S_SONATYPE_OSS_PASSWORD: ${{secrets.SONATYPE_OSS_PASSWORD}}
+          S_SONATYPE_OSS_USERNAME: ${{secrets.SONATYPE_OSS_USERNAME}}
+          S_GITHUB_RELEASE_TOKEN: ${{secrets._GITHUB_RELEASE_TOKEN}}
