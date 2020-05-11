@@ -12,7 +12,7 @@ jobs:
         with:
           SECRETS: |
             ^S_.*
-          REPOSITORIES: ^pearxteam\/
+          REPOSITORIES: ^pearxteam\/(?!secrets$)
           GITHUB_TOKEN: ${{ secrets._GITHUB_SYNC_TOKEN }}
         env:
           S_CURSEFORGE_API_KEY: ${{secrets.CURSEFORGE_API_KEY}}
